@@ -16,6 +16,7 @@ console.log(produto);
 
 produto.preco = undefined; // evitar atribuir undefined utilizar o null para limpar
 console.log(!!produto.preco);
+console.log(produto.preco === void 0);
 // delete produto.preco; objeto vazio
 console.log(produto);
 
