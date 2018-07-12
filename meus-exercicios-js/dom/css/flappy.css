@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+[wm-flappy] {
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 700px;
+    width: 1200px;
+    margin: 15px auto;
+    background-color: deepskyblue;
+    overflow: hidden;
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+    bottom: 50%;
+}
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border: 2px solid #000;
+}
+
+.barreira .corpo {
+    height: 40px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 70px;
+    font-family: 'Pixel';
+    z-index: 100;
+}
+
+/* div[wm-flappy] {
+    background-color: #72c4cf;
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    border: 3px solid #0d8b9b;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bird {
+    position: absolute;
+    display: inline-block;
+    width: 69px;
+    height: 50px;
+    bottom: 50%;
+    left: 45%;
+}
+
+.bird img {
+    width: 100%;
+    height: 100%;
+}
+
+.obstacle {
+    display: flex;
+    flex-direction: column;
+    width: 6vw;
+    height: 100%;
+    background: #fff;
+    justify-content: space-between;
+    right: -6px;
+    position: absolute;
+}
+
+.tube-1 {
+    height: 20%;
+} 
+
+.tube-2 {
+    height: 20%;
+}
+
+.head-tube, .body-tube {
+    border: 1px solid rgb(47, 47, 47);
+    background-color: #AFDE61;
+    box-shadow: inset 13px 0px 19px #868484a6;
+    box-sizing: border-box;
+}
+
+.head-tube {
+    width: 100%;
+    height: 30px;
+}
+
+.body-tube {
+    width: 80%;
+    height: calc(100% - 30px);
+    margin: auto;
+    border-top: none;
+    border-bottom: none;
+}
+
+
+ */
