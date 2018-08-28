@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <p>{{ link }}</p>
+        <!-- Não será redirecionado para o link -->
+        <p><a href="{{ link }}">google</a></p> 
+        <!-- Redireciona atraves da diretiva v-bind: -->
+        <p><a v-bind:href="link">google</a></p>
+        <!-- Pode ser substituido por ":" -->
+        <p><a :href="link">google</a></p>
+        <!-- v-model responsável por atualizar o span ao digitar no campo input -->
+        <p>
+            <input type="text" v-model="nome"><br>
+            <span>{{ nome }}</span>
+        </p>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "Maria",
+                link: "https://www.google.com.br"
+            },
+            watch: {
+                nome(novoValor) {
+                    console.log(novoValor.toUpperCase())
+                }
+            }// quando o dado passado no caso "nome" sofrer qualquer tipo de alteração, coloca no console o novo valor com uppercase
+        })
+    </script>
+</body>
+</html>
