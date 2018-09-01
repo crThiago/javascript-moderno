@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS empresas_unidades (
     cidade_id INT UNSIGNED NOT NULL,
     sede TINYINT(1) NOT NULL,
     PRIMARY KEY (empresa_id, cidade_id),
-    UNIQUE KEY (empresa_id, cidade_id)
+    foreign key (empresa_id) references empresa (id),
+    foreign key (cidade_id) references cidade (id)
 );
 
 
